@@ -1,8 +1,12 @@
 export const constants = {
   VERSION: '1.0.0-SNAPSHOT',
-  NAME_APP: 'Gestión de empresas',
+  NAME_APP: 'Companies Administration',
   VIEWS:{
-    MENU:'Menú'
+    HOME:'Home',
+    MENU:'Menu',
+    ENTERPRISES:'Companies',
+    DEPARTMENTS:'Departments',
+    EMPLOYEES:'Employees',
   },
   SERVICES: {
     USER:'admin',

@@ -18,7 +18,7 @@ export class NavigationComponent {
       map(result => result.matches),
       shareReplay()
     );
-    nameApp: any;
+    constants: any;
     prf:any;
 
   constructor(
@@ -26,13 +26,25 @@ export class NavigationComponent {
     private router : Router) {}
 
   async ngOnInit() {
-    console.warn('acceso console',constants.NAME_APP);
-    this.nameApp=constants.NAME_APP;
-    this.prf=false;
+    this.constants=constants;
+    this.prf=0;
   }
 
-  goNewEnterprise() {
-    this.prf=true;
+  goHome() {
+    this.prf=0;
+
+  }
+  goAdminEnterprise() {
+    this.prf=1;
+  }
+
+  goAdminDepartment() {
+    this.prf=2;
+
+  }
+
+  goAdminEmployee() {
+    this.prf=3;
 
   }
 

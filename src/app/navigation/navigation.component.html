@@ -3,11 +3,12 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>{{constants.VIEWS.MENU}}</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item (click)="goNewEnterprise()">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item (click)="goHome()">{{constants.VIEWS.HOME}}</a>
+      <a mat-list-item (click)="goAdminEnterprise()">{{constants.VIEWS.ENTERPRISES}}</a>
+      <a mat-list-item (click)="goAdminDepartment()">{{constants.VIEWS.DEPARTMENTS}}</a>
+      <a mat-list-item (click)="goAdminEmployee()">{{constants.VIEWS.EMPLOYEES}}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -19,10 +20,12 @@
         (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>{{nameApp}}</span>
+      <span>{{constants.NAME_APP}}</span>
     </mat-toolbar>
 
-    <app-dashboard  *ngIf="prf==false"></app-dashboard>
-    <app-new-enterprise *ngIf="prf==true"></app-new-enterprise>
+    <app-dashboard  *ngIf="prf==0"></app-dashboard>
+    <app-admin-enterprise *ngIf="prf==1"></app-admin-enterprise>
+    <app-admin-department *ngIf="prf==2"></app-admin-department>
+    <app-admin-employee *ngIf="prf==3"></app-admin-employee>
   </mat-sidenav-content>
 </mat-sidenav-container>

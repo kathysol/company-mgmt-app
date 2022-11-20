@@ -17,13 +17,19 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { NewEnterpriseComponent } from './new-enterprise/new-enterprise.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminEnterpriseComponent } from './admin-enterprise/admin-enterprise.component';
+import { AdminDepartmentComponent } from './admin-department/admin-department.component';
+import { AdminEmployeeComponent } from './admin-employee/admin-employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     DashboardComponent,
-    NewEnterpriseComponent
+    NewEnterpriseComponent,
+    AdminEnterpriseComponent,
+    AdminDepartmentComponent,
+    AdminEmployeeComponent
   ],
   imports: [
     BrowserModule,
