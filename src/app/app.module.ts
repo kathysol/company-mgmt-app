@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminEnterpriseComponent } from './admin-enterprise/admin-enterprise.component';
 import { AdminDepartmentComponent } from './admin-department/admin-department.component';
 import { AdminEmployeeComponent } from './admin-employee/admin-employee.component';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AdminEmployeeComponent } from './admin-employee/admin-employee.componen
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    HttpClientModule
+    HttpClientModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
