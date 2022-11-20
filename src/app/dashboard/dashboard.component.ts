@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 
+import { constants } from 'src/constants/constants';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
