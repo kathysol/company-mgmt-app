@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CompanyMgmtService } from '../company-mgmt.service';
+import EnterpriseVO from '../model/DepartmentVO';
 
 @Component({
   selector: 'app-admin-enterprise',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminEnterpriseComponent implements OnInit {
 
-  constructor() { }
+  enterpriseAll: EnterpriseVO[]= [];
+  constructor(private companyMgmtService:CompanyMgmtService) { }
+
 
   ngOnInit(): void {
+    this.getAllEnterprises();
   }
+
+
+  getAllEnterprises(){
+    this.companyMgmtService.getAllEnterprises().subscribe(resp =>{
+      this.enterpriseAll=resp;
+      console.warn('ENTERPRISES ALL',this.enterpriseAll);
+    })
+
+}
 
 }

@@ -7,16 +7,11 @@ import { CompanyMgmtService } from '../company-mgmt.service';
 })
 export class NewEnterpriseComponent implements OnInit {
 
-  constructor(private CompanyMgmtService:CompanyMgmtService) { }
+  constructor(private companyMgmtService:CompanyMgmtService) { }
 
   ngOnInit(): void {
-    this.obtenerData();
+
   }
 
-  obtenerData(){
-    this.CompanyMgmtService.get().subscribe(resp =>{
-      console.warn('RESP1',resp);
-    })
-  }
 
-}
+  }
