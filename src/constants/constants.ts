@@ -4,6 +4,9 @@ export const constants = {
   VIEWS:{
     MENU:'Menú'
   },
-  SERVICES: {}
+  SERVICES: {
+    USER:'admin',
+    PASSWORD:'admin'
+  }
 
 }

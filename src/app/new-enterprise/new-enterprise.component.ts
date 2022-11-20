@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CompanyMgmtService } from '../company-mgmt.service';
 @Component({
   selector: 'app-new-enterprise',
   templateUrl: './new-enterprise.component.html',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewEnterpriseComponent implements OnInit {
 
-  constructor() { }
+  constructor(private CompanyMgmtService:CompanyMgmtService) { }
 
   ngOnInit(): void {
+    this.obtenerData();
+  }
+
+  obtenerData(){
+    this.CompanyMgmtService.get().subscribe(resp =>{
+      console.warn('RESP1',resp);
+    })
   }
 
 }
