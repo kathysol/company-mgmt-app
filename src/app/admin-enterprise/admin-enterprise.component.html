@@ -1,1 +1,47 @@
-<p>admin-enterprise works!</p>
+<div class="row">
+  <p>admin-enterprise works!</p>
+</div>
+<div class="row">
+  <div class="col-md-5">
+
+      <p-table [value]="enterpriseAll" [tableStyle]="{'min-width': '60rem'}">
+        <ng-template pTemplate="header">
+          <tr>
+              <th>Code</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>Status</th>
+              <th>Created By</th>
+              <th>Created Date</th>
+              <th>Modified By</th>
+              <th>Modified Date</th>
+              <th>Actions</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-enterprise>
+          <tr>
+              <td pSortableColumn="id" style="width:10%">{{enterprise.id}} <p-sortIcon field="id"></p-sortIcon></td>
+              <td>{{enterprise.name}}</td>
+              <td>{{enterprise.address}}</td>
+              <td>{{enterprise.phone}}</td>
+              <td>{{enterprise.status}}</td>
+              <td>{{enterprise.createdBy}}</td>
+              <td>{{enterprise.createdDate}}</td>
+              <td>{{enterprise.modifiedBy}}</td>
+              <td>{{enterprise.modifiedDate}}</td>
+              <td>actions</td>
+          </tr>
+      </ng-template>
+      </p-table>
+
+  </div>
+  <div class="col-md-5">
+  </div>
+  <div class="col-md-2">
+    <p>admin-enterprise works!</p>
+  </div>
+
+  <div class="row">K</div>
+</div>
+

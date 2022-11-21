@@ -21,6 +21,7 @@ import { AdminEnterpriseComponent } from './admin-enterprise/admin-enterprise.co
 import { AdminDepartmentComponent } from './admin-department/admin-department.component';
 import { AdminEmployeeComponent } from './admin-employee/admin-employee.component';
 import {TableModule} from 'primeng/table';
+import {FieldsetModule} from 'primeng/fieldset';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {TableModule} from 'primeng/table';
     MatCardModule,
     MatMenuModule,
     HttpClientModule,
-    TableModule
+    TableModule,
+    FieldsetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
